@@ -4,6 +4,8 @@ This project implements a production-style hybrid identity architecture by integ
 
 It establishes a **single, unified identity** across on-prem and cloud environments, incorporating advanced capabilities such as scoped synchronization, seamless Single Sign-On (SSO), Conditional Access, and writeback features.
 
+![Architecture](Image/Architecture.png)
+
 ---
 
 ## 🔑 Core Capabilities
