@@ -3,6 +3,7 @@
 This project implements a production-style hybrid identity architecture by integrating on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID using Microsoft Entra Connect Sync.
 
 It establishes a **single, unified identity** across on-prem and cloud environments, incorporating advanced capabilities such as scoped synchronization, seamless Single Sign-On (SSO), Conditional Access, and writeback features.
+
 ---
 
 ![Architecture](Image/Architecture.png)
