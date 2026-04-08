@@ -13,7 +13,9 @@ It establishes a **single, unified identity** across on-prem and cloud environme
 
 ### Directory Synchronization
 - On-prem AD users synchronized to Microsoft Entra ID  
-- OU-based filtering for scoped identity sync  
+- OU-based filtering for scoped identity sync
+
+![EC2](Image/EC2.png)
 
 ### Unified Identity Model
 - Single identity across hybrid infrastructure  
