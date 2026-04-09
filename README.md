@@ -175,3 +175,25 @@ PingFederate is a federation server similar to ADFS but provided by Ping Identit
 
 ---
 
+## UPN and Entra ID Sign-In
+
+![EC2](Image/HI2.png)
+
+- `gelosec.com` is a verified domain in Entra ID  
+  → Users can sign in to the cloud using this UPN
+
+- `gelo.com` is not added or not verified  
+  → Users cannot use this UPN for cloud sign-in  
+  → Accounts can sync, but authentication will fail
+
+## Key Principle
+
+Only UPN suffixes that match **verified domains in Entra ID** can be used for cloud authentication.
+
+## User Sign-In
+
+The UPN that matches a verified Entra ID domain is used as the login identity in the cloud.
+
+## userPrincipalName Attribute
+
+`userPrincipalName` defines which Active Directory attribute is used as the username for cloud sign-in.
