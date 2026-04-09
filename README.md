@@ -197,3 +197,59 @@ The UPN that matches a verified Entra ID domain is used as the login identity in
 ## userPrincipalName Attribute
 
 `userPrincipalName` defines which Active Directory attribute is used as the username for cloud sign-in.
+
+---
+![EC2](Image/HI3.png)
+
+## Identity Matching and Source Anchor
+
+### Users are represented once across all directories
+
+- It just means each user exists only once in the environment. No duplicate identities across forests or directories.
+- One AD user = one Entra ID User.
+
+---
+
+### Users exist across multiple directories
+
+Used when the same user exists in multiple directories (e.g., multiple forests).
+
+- Requires matching to merge identities into a single cloud user  
+
+**Example:**
+- User exists in Forest A and Forest B  
+- Without matching → two separate cloud users  
+- With matching → one unified identity  
+
+---
+
+## Source Anchor
+
+The **source anchor** is the unique, immutable identifier that links an on-prem AD user to an Entra ID user.
+
+- Ensures the same identity is maintained across syncs  
+- Prevents duplicate or mismatched accounts  
+
+### Immutable
+
+Immutable means the value **must not change once set**.
+
+- If it changes, Entra ID treats the user as a new identity  
+
+---
+
+### Let Azure manage the source anchor
+
+- Entra ID automatically selects and manages a stable attribute  
+- Recommended for most environments  
+- Reduces risk of misconfiguration  
+
+---
+
+### Choose a specific attribute
+
+- You manually define the attribute used as the source anchor  
+- This attribute becomes the permanent identity key  
+
+---
+
