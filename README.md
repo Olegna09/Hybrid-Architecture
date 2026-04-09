@@ -50,3 +50,140 @@ It establishes a **single, unified identity** across on-prem and cloud environme
 To demonstrate how organizations can extend traditional identity systems into the cloud while enforcing security controls, minimizing user friction, and enabling hybrid access to applications.
 
 This project highlights key identity design considerations, including synchronization scope, authentication experience, and access governance.
+
+---
+
+![EC2](
+
+# Identity Authentication Methods (PHS, PTA, ADFS, Federation)
+
+This document explains common hybrid identity authentication methods used with Active Directory and cloud identity platforms.
+
+---
+
+## 🔐 Password Hash Synchronization (PHS)
+
+Password Hash Synchronization (PHS) is a method that synchronizes password hashes from on-premises Active Directory to the cloud.
+
+### ✅ What it does
+- Allows users to use the **same credentials** for on-prem and cloud authentication
+- Authentication happens **entirely in the cloud**
+- Does **not require on-prem infrastructure during login**
+
+### ⚙️ How it works
+1. User password is hashed in Active Directory
+2. That hash is **hashed again (re-hashed)**
+3. The re-hashed value is synced to the cloud (e.g., Entra ID)
+4. Authentication is performed in the cloud using the synced hash
+
+> 🔒 The cloud never sees or stores the actual password
+
+### 👍 Advantages
+- High availability (works even if on-prem is down)
+- Simple architecture
+- No dependency on on-prem infrastructure for authentication
+
+---
+
+## 🔄 Pass-Through Authentication (PTA)
+
+Pass-Through Authentication (PTA) validates user credentials directly against on-prem Active Directory in real time.
+
+### ✅ What it does
+- Ensures authentication is **always validated against on-prem AD**
+- Enforces **real-time policies** (e.g., account lockout, logon restrictions)
+
+### ⚙️ How it works
+1. User attempts to log in to a cloud service
+2. Request is securely sent to a **PTA agent** running on-prem
+3. The agent validates credentials against Active Directory
+4. Result is returned to the cloud
+
+### ⚠️ Important Design Considerations
+- **No credential cache in the cloud**
+- Every authentication requires **live communication with on-prem AD**
+
+### 🧱 High Availability Requirements
+- At least **2 Domain Controllers**
+- At least **2 PTA agents on separate servers**
+- Reliable network connectivity
+
+### ❗ Failure Behavior
+- If all PTA agents are down → authentication fails
+- If AD is unreachable → authentication fails
+
+---
+
+## 🪪 Active Directory Federation Services (ADFS)
+
+Active Directory Federation Services (ADFS) is a federation service that provides authentication using **claims-based identity**.
+
+### ✅ What it does
+- Acts as an **Identity Provider (IdP)**
+- Issues authentication **tokens** (SAML, OAuth, WS-Fed)
+- Enables **federated login** across systems
+
+### ⚙️ How it works (Example: Microsoft 365)
+1. User accesses an application (e.g., Microsoft 365)
+2. User is redirected to ADFS
+3. ADFS authenticates the user against Active Directory
+4. ADFS issues a **token**
+5. The application trusts the token and grants access
+
+---
+
+## 🔗 Federation (Concept)
+
+Federation is a trust relationship between systems.
+
+> One system trusts another system to authenticate users on its behalf.
+
+Instead of authenticating users directly, applications rely on a trusted identity provider.
+
+---
+
+## 🌐 Federation with PingFederate
+
+PingFederate is a federation server similar to ADFS but provided by Ping Identity.
+
+### ✅ What it does
+- Acts as an **Identity Provider (IdP)**
+- Authenticates users via AD, LDAP, MFA, or other sources
+- Issues tokens for applications
+
+### ⚙️ How it works
+1. User accesses an application
+2. User is redirected to PingFederate
+3. PingFederate authenticates the user
+4. A token is issued
+5. The application trusts the token
+
+### 🧠 Note
+PingFederate can be:
+- On-premises (internal IdP)
+- Cloud-hosted (external IdP)
+
+---
+
+## 🧠 Summary
+
+| Method | Description |
+|------|------------|
+| **PHS** | Synchronizes password hashes to the cloud for cloud-based authentication |
+| **PTA** | Authenticates against on-prem AD in real time via agents |
+| **ADFS / PingFederate** | Uses federation and tokens to delegate authentication |
+
+### 🔑 Mental Model
+
+- **PHS** → "Copy password hash to cloud"
+- **PTA** → "Validate against on-prem every login"
+- **ADFS / PingFederate** → "Authenticate once, issue token, and trust it"
+
+---
+
+## ⚠️ Design Insight
+
+- **PHS** → Most resilient (cloud-first)
+- **PTA** → Depends on on-prem availability
+- **ADFS / Federation** → Highest complexity, highest control, highest risk if misconfigured
+
