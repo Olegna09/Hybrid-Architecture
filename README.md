@@ -32,7 +32,7 @@ It establishes a **single, unified identity** across on-prem and cloud environme
 - Foundation for Zero Trust security  
 
 ### Writeback Features
-- Password writeback for Self-Service Password Reset (SSPR)  
+- Password and Group writeback  
 - Enables bidirectional identity management
 
 ![EC2](Image/HI4.png)
