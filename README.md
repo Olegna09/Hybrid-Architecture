@@ -23,7 +23,9 @@ It establishes a **single, unified identity** across on-prem and cloud environme
 
 ### Seamless Single Sign-On (SSO)
 - Automatic sign-in for domain-joined devices  
-- Reduced authentication friction  
+- Reduced authentication friction
+
+![EC2](Image/HI5.png)
 
 ### Conditional Access
 - Policy-based access control for cloud resources  
@@ -31,7 +33,9 @@ It establishes a **single, unified identity** across on-prem and cloud environme
 
 ### Writeback Features
 - Password writeback for Self-Service Password Reset (SSPR)  
-- Enables bidirectional identity management  
+- Enables bidirectional identity management
+
+![EC2](Image/HI4.png)
 
 ---
 
