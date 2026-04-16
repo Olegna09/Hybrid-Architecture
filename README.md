@@ -307,7 +307,7 @@ Named Locations are **reusable network definitions** used in Conditional Access.
 ### Types
 
 - **IP-Based Locations**  
-  Static IP ranges (can be marked as *Trusted*)
+  Static IP ranges that you define manually (can be marked as *Trusted*)
 
   Example: 192.168.7.0/26
 
