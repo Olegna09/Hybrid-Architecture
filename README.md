@@ -123,7 +123,7 @@ Active Directory Federation Services (ADFS) is a federation service that provide
 
 ### What it does
 - Acts as an **Identity Provider (IdP)**
-- Issues authentication **tokens** (SAML, OAuth, WS-Fed)
+- Issues authentication **tokens** (SAML, OAuth)
 - Enables **federated login** across systems
 
 ### How it works (Example: Microsoft 365)
@@ -257,7 +257,7 @@ Immutable means the value **must not change once set**.
 
 ---
 
-# 🔐 Conditional Access
+# Conditional Access
 
 Conditional Access is a **policy engine** that controls access to applications and resources based on defined conditions.
 
@@ -296,11 +296,11 @@ Conditional Access is a **policy engine** that controls access to applications a
 
 ---
 
-## 📍 Named Locations
+## Named Locations
 
 Named Locations are **reusable network definitions** used in Conditional Access.
 
-> They provide signals — **they do not enforce access**.
+> They provide signals, **they do not enforce access**.
 
 ![EC2](Image/CA3.png)
 
@@ -316,7 +316,7 @@ Based on public IP geolocation
 
 ---
 
-### ⚠️ Security Limitations
+### Security Limitations
 
 Location-based control is **weak on its own**:
 
