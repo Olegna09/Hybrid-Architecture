@@ -261,7 +261,11 @@ Immutable means the value **must not change once set**.
 
 Conditional Access is a **policy engine** that controls access to applications and resources based on defined conditions.
 
+![EC2](Image/CA1.png)
+
 ### Core Components
+
+![EC2](Image/CA2.png)
 
 - **Users / Identities**  
   Defines *who* the policy applies to.  
@@ -297,6 +301,8 @@ Conditional Access is a **policy engine** that controls access to applications a
 Named Locations are **reusable network definitions** used in Conditional Access.
 
 > They provide signals — **they do not enforce access**.
+
+![EC2](Image/CA3.png)
 
 ### Types
 
