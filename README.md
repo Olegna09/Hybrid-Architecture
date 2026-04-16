@@ -301,5 +301,31 @@ Named Locations are **reusable network definitions** used in Conditional Access.
 ### Types
 
 - **IP-Based Locations**  
-  Static IP ranges (can be marked as *Trusted*)  
+  Static IP ranges (can be marked as *Trusted*)
+
+  Example: 192.168.7.0/26
+
+- **Countries / Regions**  
+Based on public IP geolocation
+
+---
+
+### ⚠️ Security Limitations
+
+Location-based control is **weak on its own**:
+
+- VPN spoofing (attacker appears from allowed country)
+- Cloud-hosted attacks (VMs in trusted regions)
+
+---
+
+### ✅ Best Practice
+
+Use Named Locations as **supporting signals only**, combined with:
+
+- MFA
+- Device compliance
+- Sign-in / user risk
+
+> If your security relies on IP or geography alone, it is bypassable.
 
