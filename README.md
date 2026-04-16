@@ -257,3 +257,49 @@ Immutable means the value **must not change once set**.
 
 ---
 
+# 🔐 Conditional Access
+
+Conditional Access is a **policy engine** that controls access to applications and resources based on defined conditions.
+
+### Core Components
+
+- **Users / Identities**  
+  Defines *who* the policy applies to.  
+  > Best practice: assign to **groups**, not individual users.
+
+- **Target Resources (Cloud Apps)**  
+  Defines *what* is being protected (e.g., M365, Azure, custom apps).
+
+- **Network (Locations)**  
+  Defines *where* access is coming from (IP ranges, countries, named locations).
+
+- **Conditions**  
+  Defines *when* the policy applies (risk, device platform, client app, location).
+
+- **Access Controls**  
+  Defines *what happens*:  
+  - **Block** → deny access  
+  - **Grant** → allow with requirements (MFA, compliant device, etc.)
+ 
+- **Session Controls**  
+  Defines *how long and under what conditions a session remains valid* after access is granted.
+
+  - Controls session lifetime and persistence  
+  - Can enforce reauthentication (e.g., require MFA again)  
+  - Can limit or monitor session behavior (e.g., via Conditional Access App Control)
+
+  > Focus is not just duration; it’s continuous enforcement after login.
+
+---
+
+## 📍 Named Locations
+
+Named Locations are **reusable network definitions** used in Conditional Access.
+
+> They provide signals — **they do not enforce access**.
+
+### Types
+
+- **IP-Based Locations**  
+  Static IP ranges (can be marked as *Trusted*)  
+
