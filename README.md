@@ -325,7 +325,7 @@ Location-based control is **weak on its own**:
 
 ---
 
-### ✅ Best Practice
+### Best Practice
 
 Use Named Locations as **supporting signals only**, combined with:
 
@@ -334,4 +334,41 @@ Use Named Locations as **supporting signals only**, combined with:
 - Sign-in / user risk
 
 > If your security relies on IP or geography alone, it is bypassable.
+
+---
+
+## Key Takeaways
+
+### What Problem This Solves
+
+- **Multiple accounts / confusion** → One user = one identity for both on-prem and cloud  
+- **Weak or inconsistent security** → Centralized control using Conditional Access  
+- **Too many logins** → Seamless SSO reduces repeated sign-ins  
+- **On-prem only setup** → Extended to cloud for modern apps and access  
+- **Manual user management** → Automated sync and writeback  
+
+---
+
+### Lesson Learned
+
+- **Hybrid identity connects old and new systems**  
+  It lets on-prem Active Directory work with cloud services like Microsoft 365.
+
+- **There are different ways users can log in**  
+  Each method (PHS, PTA, Federation) has pros and cons, no one-size-fits-all.
+
+- **Security should not rely on location alone**  
+  IP address or country can be faked, don’t trust it blindly.
+
+- **Conditional Access adds smart security**  
+  It checks things like user, device, and risk before allowing access.
+
+- **Login is not the end of security**  
+  Sessions can still be controlled after login (e.g., require MFA again).
+
+- **Keep it simple and layered**  
+  Use multiple controls together (MFA, device checks, policies) instead of relying on just one.
+
+- **Identity is the center of everything**  
+  If identity is secure, access becomes easier to control.
 
