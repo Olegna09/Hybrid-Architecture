@@ -372,3 +372,28 @@ Use Named Locations as **supporting signals only**, combined with:
 - **Identity is the center of everything**  
   If identity is secure, access becomes easier to control.
 
+---
+
+Here is the full break down of my project.
+
+# Hybrid Identity Project
+
+## 🎥 Hybrid Identity Setup
+[![Watch](https://img.youtube.com/vi/VIDEO1/0.jpg)](https://youtu.be/oD80HMzhOnU)
+
+Covers:
+- Azure AD Connect
+- Sync setup
+- Identity architecture
+
+---
+
+## 🎥 Conditional Access Policy
+[![Watch](https://img.youtube.com/vi/VIDEO2/0.jpg)](https://youtu.be/yKDtDiFSpNo)
+
+Covers:
+- Policy design
+- MFA enforcement
+- Risk-based access
+
+
