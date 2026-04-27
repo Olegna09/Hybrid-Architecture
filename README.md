@@ -374,12 +374,10 @@ Use Named Locations as **supporting signals only**, combined with:
 
 ---
 
-Here is the full break down of my project.
-
-# Hybrid Identity Project
+#Here is the full break down of my project.
 
 ## 🎥 Hybrid Identity Setup
-[![Watch](Image/Thumbnail.png)](https://youtu.be/oD80HMzhOnU)
+[![Watch Hybrid Identity Setup](./Image/Thumbnail.png)](https://youtu.be/oD80HMzhOnU)
 
 Covers:
 - Azure AD Connect
@@ -389,11 +387,10 @@ Covers:
 ---
 
 ## 🎥 Conditional Access Policy
-[![Watch](Image/3rdthumbnail.png)](https://youtu.be/yKDtDiFSpNo)
+[![Watch Conditional Access Policy](./Image/3rdthumbnail.png)](https://youtu.be/yKDtDiFSpNo)
 
 Covers:
 - Policy design
 - MFA enforcement
 - Risk-based access
-
 
