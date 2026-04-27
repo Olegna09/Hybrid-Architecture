@@ -374,7 +374,7 @@ Use Named Locations as **supporting signals only**, combined with:
 
 ---
 
-## 📌 Project Breakdown
+## Project Breakdown
 
 This project demonstrates a complete **Hybrid Identity implementation** using Azure AD, including identity synchronization and access control.
 
