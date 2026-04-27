@@ -389,7 +389,7 @@ Covers:
 ---
 
 ## 🎥 Conditional Access Policy
-[![Watch](https://img.youtube.com/vi/VIDEO2/0.jpg)](https://youtu.be/yKDtDiFSpNo)
+[![Watch](Image/3rdthumbnail.png)](https://youtu.be/yKDtDiFSpNo)
 
 Covers:
 - Policy design
