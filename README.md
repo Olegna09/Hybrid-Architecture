@@ -379,7 +379,7 @@ Here is the full break down of my project.
 # Hybrid Identity Project
 
 ## 🎥 Hybrid Identity Setup
-[![Watch](https://img.youtube.com/vi/VIDEO1/0.jpg)](https://youtu.be/oD80HMzhOnU)
+[![Watch](Image/Thumbnail.png)](https://youtu.be/oD80HMzhOnU)
 
 Covers:
 - Azure AD Connect
