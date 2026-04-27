@@ -374,23 +374,26 @@ Use Named Locations as **supporting signals only**, combined with:
 
 ---
 
-#Here is the full break down of my project.
+## 📌 Project Breakdown
 
-## 🎥 Hybrid Identity Setup
+This project demonstrates a complete **Hybrid Identity implementation** using Azure AD, including identity synchronization and access control.
+
+🎥 Watch the full walkthrough:
+
+### Hybrid Identity Setup
 [![Watch Hybrid Identity Setup](./Image/Thumbnail.png)](https://youtu.be/oD80HMzhOnU)
 
 Covers:
-- Azure AD Connect
-- Sync setup
-- Identity architecture
+- Azure AD Connect configuration
+- Identity synchronization (on-prem → cloud)
 
 ---
 
-## 🎥 Conditional Access Policy
+### Conditional Access Policy in Hybrid Identity
 [![Watch Conditional Access Policy](./Image/3rdthumbnail.png)](https://youtu.be/yKDtDiFSpNo)
 
 Covers:
-- Policy design
-- MFA enforcement
-- Risk-based access
+- Designing Conditional Access policies
+- Enforcing MFA
+- Risk-based access control
 
